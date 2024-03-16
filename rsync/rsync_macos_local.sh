@@ -11,12 +11,13 @@ cd ..
 read -p "Would you like to run a dry-run? Enter 0 for yes and 1 for no." input
 
 # adjust the code here if you do not want to have the --delete flag
+# --exclude='**/.DS_Store' will exclude all instances of .DS_Store
 if [ "$input" -eq 0 ]; then
     echo "Running dry run of rsync script"
-    rsync -anPv --delete Users/johnz.wu/trove Volumes/johnzwu/backup/jozhw
+    rsync -anPv --exclude='**/.DS_Store' --delete Users/johnz.wu/trove Volumes/johnzwu/backup/jozhw
 elif [ "$input" -eq 1 ]; then
     echo "Running rsync script"
-    rsync -aPv --delete Users/johnz.wu/trove Volumes/johnzwu/backup/jozhw
+    rsync -aPv --exclude='**/.DS_Store' --delete Users/johnz.wu/trove Volumes/johnzwu/backup/jozhw
 else
     echo "No command selected"
 fi

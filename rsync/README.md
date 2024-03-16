@@ -50,3 +50,29 @@ in the source directory.
 ### --progress
 
 Prints a progress bar.
+
+### --exclude
+
+Excludes a file or directory.
+
+## How To
+
+### Exclude all instances of a file or directory
+
+To exclude all instances of a directory:
+
+```
+--exclude='**/<dir>'
+```
+
+To exclude all instances of a file:
+
+```
+--exclude='**/<file_name>'
+```
+
+To exclude all instances of a file type:
+
+```
+--exclude='*.<file_type>'
+```
